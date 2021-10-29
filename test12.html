@@ -5,27 +5,129 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/d47cb01634.js" crossorigin="anonymous"></script>
     <title>BMI Calculator</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f1f3f6;
+        }
+
+        h1 {
+            margin-bottom: 2rem;
+        }
+
+        .wrapper {
+            width: 500px;
+            height: 100px;
+        }
+
+        .wrapper h3 {
+            color: #343434;
+            font-size: 1rem;
+        }
+
+        .wrapper input[type="number"] {
+            border: none;
+            outline: none;
+            width: 100%;
+            height: 50%;
+            background-color: transparent;
+            font-size: 1.5rem;
+            border-bottom: 1px solid #c9c9ca;
+            color: #043AEC;
+        }
+
+        .wrapper input[type="number"]:hover {
+            border-bottom: 1px solid #043AEC;
+        }
+
+        .wrapper input[type="number"]:focus {
+            border-bottom: 1px solid #043AEC;
+        }
+
+        .wrapper button {
+            width: 100%;
+            height: 70%;
+            border: none;
+            background-color: #d9dfe8;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+            color: #343434;
+        }
+
+        .wrapper button:hover {
+            background-color: #b9bec2;
+        }
+        .Y{
+            height: 180px;
+            box-shadow: -9px -9px 16px rgb(255 255 255 / 80%), 9px 9px 16px rgb(216 221 228 / 80%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .box-wrapper{
+            width: 90%;
+            height: 75%;
+            border: 1px solid #fff;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .active{
+            border: 1px solid rgb(85, 209, 81);
+        }
+        .box-wrapper h3{
+            color: #343434;
+        }
+        .box-wrapper #BMIValue{
+            font-size: 2.1rem;
+            color: #343434;
+        }
+        .box-wrapper #BMIResult{
+            color: #343434;
+            font-size: 1.1rem;
+        }
+    </style>
 </head>
 
 <body>
     <div class="container">
         <h1>BMI Calculator</h1>
         <hr>
-        น้ำหนักตัว (Kg)
-        <br>
-        <input type="number" name="" id="weight"><br>
-        ส่วนสูง (Kg)
-        <br>
-        <input type="number" name="" id="height">
-        <br><br>
-        <button id="calBMI">คำนวณ</button>
-        <br><br>
-        BMI
-        <br><br>
-        <span id="BMIValue">0</span>
-        <br><br>
-        <span id="BMIResult">การแปลผล BMI</span>
+        <div class="wrapper">
+            <h3 for="">น้ำหนักตัว (Kg.)</h3>
+            <input type="number" name="" id="weight"><br>
+        </div>
+        <div class="wrapper">
+            <h3 for="">ส่วนสูง (Cm.)</h3>
+            <input type="number" name="" id="height">
+        </div>
+        <div class="wrapper">
+            <button id="calBMI">คำนวณ <i class="fas fa-arrow-down"></i></button>
+        </div>
+        <div class="wrapper Y">
+            <div class="box-wrapper">
+                <h3 for="">BMI</h3><br>
+                <span id="BMIValue">0</span><br>
+                <span id="BMIResult">การแปลผล BMI</span>
+            </div>
+        </div>
     </div>
 
     <script src="js/script12.js"></script>

@@ -5,6 +5,8 @@ const BMIValue = document.querySelector('#BMIValue');
 const BMIResult = document.querySelector('#BMIResult');
 
 calBMI.onclick = () => {
+    document.querySelector('.box-wrapper').classList.add('active');
+
     if(weight.value.length == 0){
         alert('ป้อนน้ำหนักด้วย');
     }
