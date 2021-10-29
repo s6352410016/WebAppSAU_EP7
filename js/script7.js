@@ -1,12 +1,5 @@
-
 const btnOk = document.querySelector("#btnOk");
-
-
 btnOk.onclick = () => {
-    multipyTable();
-}
-
-const multipyTable = () => {
     let num = document.querySelector("#num").value;
     let showResult = '';
     for(let i = 1; i <= 12; i++){
