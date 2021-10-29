@@ -1,1 +1,105 @@
-SAU
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        header {
+            background-color: #ededed;
+        }
+
+        .container {
+            max-width: 960px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            height: 70px;
+            display: grid;
+            place-items: center;
+        }
+
+        .logo h1 {
+            color: blueviolet;
+            text-align: center;
+        }
+
+        .center {
+            margin-top: 1rem;
+            text-align: center;
+            font-size: 1.1rem;
+        }
+
+        .center input[type="text"] {
+            outline: none;
+            width: 200px;
+            height: 30px;
+            font-size: 1rem;
+            padding: 5px;
+        }
+
+        .center button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #ededed;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 1rem;
+        }
+
+        .center button:hover {
+            background-color: #333;
+            color: #fff;
+        }
+
+        form div:last-child {
+            margin-left: 1.3rem;
+        }
+        #showSum{
+            font-size: 1.2rem;
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>Money Share แชร์เงินกัน</h1>
+            </div>
+        </div>
+    </header>
+    <article>
+        <div class="container">
+            <div class="center">
+                <label for="">ป้อนเงิน</label>
+                <input type="text" name="" id="money"> บาท
+            </div>
+            <div class="center">
+                <label for="">ป้อนคน</label>
+                <input type="text" name="" id="person"> คน
+            </div>
+            <div class="center">
+                <button id="btnCal">คำนวณ</button>&nbsp;&nbsp;&nbsp;
+                <button id="btnCancel">ยกเลิก</button>
+            </div><br>
+        </div>
+        <hr style="border: none; height: 10px; background-color: blueviolet;"><br>
+        <p align="center">แชร์เงินคนละ <span id="showSum">0.00</span> บาท</p>
+    </article>
+
+    <script src="js/script11.js"></script>
+</body>
+
+</html>
